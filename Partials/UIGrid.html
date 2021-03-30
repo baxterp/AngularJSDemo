@@ -1,0 +1,33 @@
+﻿<div ng-controller="JSONUIGridController">
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <p>The grid below is a AngularJS UI Grid control, styled with CSS overrides in a local resource. The data displayed is loaded from a WebAPI data service hosted locally.</p>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="return false;">Controller source code</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                        <div id="sourcecode" class="panel-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div style="padding-top:20px">
+                <div id="grid1" ui-grid="gridOptions" class="grid"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript-lazy">
+        $('#sourcecode')
+          .load('SourceCode/GridController.html');
+    </script>
+</div>

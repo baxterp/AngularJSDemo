@@ -1,0 +1,27 @@
+﻿<div data-ng-controller="CarouselController">
+    <div class="row">
+        <div class="col-md-6">
+            <label style="font-size:16pt;padding-left:5px">Flickr Search</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6" style="padding-top:5px">
+            <input type="text" class="form-control" ng-model="description" ng-enter="searchImage()" />
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-default btn-lg" type="button" ng-click="searchImage()">Get images</button>
+        </div>
+    </div>
+    <div class="row" ng-show="images">
+        <div class="col-md-12">
+            <ul rn-carousel rn-carousel-auto-slide rn-carousel-pause-on-hover rn-carousel-buffered >
+                <li ng-repeat="image in images.photos.photo|limitTo:5">
+                    <div ng-style="'background-image': url('https://farm{{image.farm}}.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}.jpg')" class="bgimage">
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+</div>

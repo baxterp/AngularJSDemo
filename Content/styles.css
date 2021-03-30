@@ -1,0 +1,69 @@
+﻿/*.dropdown.open a{
+    color: #FFFFFF !important;
+}
+
+.dropdown.open {
+    background-color: #252525 !important;
+}*/
+
+#ProductsTable th{
+    color:lightskyblue;
+}
+
+.isValid
+{
+    background-color: lightpink;
+}
+
+.notValid
+{
+    background-color: white;
+}
+body {
+    /*background-image: url('../Images/back4.jpg');*/
+    /*background-image: url('../Images/dark_background_2-wallpaper-1280x1024.jpg');
+    background-size:auto;*/
+}
+
+.table {
+    max-width: inherit;
+}
+
+/*ui-grid*/
+.grid {
+    width: inherit;
+    height: 600px;
+    color:black;
+    background-color:gray;
+}
+
+@font-face {
+  font-family: 'ui-grid';
+  src: url('../fonts/ui-grid.eot');
+  src: url('../fonts/ui-grid.eot#iefix') format('embedded-opentype'), url('../fonts/ui-grid.woff') format('woff'), url('../fonts/ui-grid.ttf?') format('truetype'), url('../fonts/ui-grid.svg?#ui-grid') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/*.ui-grid-header-cell .sortable {
+    background-color: gray;
+    color:darkgray;
+}*/
+
+.HeaderCell {
+    color: #fcf5eb;
+    background-image: linear-gradient( #424242, #1A1A1A ) !important;
+    font-weight: 400;
+}
+
+.odd {
+  background-color: #E8E8E8 !important;
+  color: #292929;
+}
+
+.even {
+  background-color: #D1D1D1 !important;
+  color: #292929;
+}

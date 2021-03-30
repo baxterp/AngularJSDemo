@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="WebAPIDemo">
+<head>
+    <title>BRPSoft - Angular Single Page Demo</title>
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/custom.css" rel="stylesheet" />
+    <link href="Content/magnific-popup.css" rel="stylesheet" />
+    <link href="Content/styles.css" rel="stylesheet" />
+    <link href="Content/angular-carousel.min.css" rel="stylesheet" />
+    <link href="Content/ui.grid.css" rel="stylesheet" />
+    <link href="Content/jquery.jqplot.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="page-header" style="margin-top:10px">
+                    <h1 id="navbar">Angular JS Single Page Demo</h1>
+                </div>
+
+                <div class="bs-component">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="#/">Home</a>
+                            </div>
+
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown">Data Operations<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#/products">Products Service</a></li>
+                                            <li><a href="#/editable">Editable Table</a></li>
+                                            <li><a href="#/uigrid">Angular UI Grid</a></li>
+                                            <li><a href="#/uichart">Angular UI Chart</a></li>
+                                            <li><a href="#/barchart">JQPlot Barchart</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="navbar-btn" style="padding-right: 10px">
+                                            <a href="#/bindingfilters" class="btn btn-default">Forms & Binding</a>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="navbar-btn" style="padding-right: 10px">
+                                            <a href="#/flickrimages" class="btn btn-default">Lazy Loading Image search</a>
+                                        </p>
+                                    </li>
+                                    <!--<li>
+                                        <p class="navbar-btn" style="padding-right: 10px">
+                                            <a href="#/carousel" class="btn btn-default">Angular Carousel</a>
+                                        </p>
+                                    </li>-->
+
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10" style="padding-left: 25px;padding-right: 25px">
+                <ng-view></ng-view>
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <!--<script src="JS/custom.js"></script>-->
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-touch.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-animate.js"></script>
+
+    <script src="Scripts/angular-carousel.min.js"></script>
+    <script src="Scripts/ui-grid.js"></script>
+    <script src="Scripts/ui-chart.js"></script>
+    <script src="Scripts/jquery.jqplot.js"></script>
+    <script src="Scripts/jqplot.pieRedender.js"></script>
+    <script src="Scripts/jqplot.barRenderer.min.js"></script>
+    <script src="Scripts/jqplot.categoryAxisRenderer.min.js"></script>
+    <script src="Scripts/jqplot.pointLabels.min.js"></script>
+
+    <script src="Scripts/jquery-magnific-popup.js"></script>
+
+    <script src="Scripts/me-lazyload.js"></script>
+
+    <script src="JS/app.js"></script>
+    <script src="JS/directives.js"></script>
+    <script src="JS/appsettings.js"></script>
+
+    <script src="Controllers/maincontroller.js"></script>
+    <script src="Controllers/editablecontroller.js"></script>
+    <script src="Controllers/imagescontroller.js"></script>
+    <script src="Controllers/flickrcontroller.js"></script>
+    <script src="Controllers/bindingfilterscontroller.js"></script>
+    <script src="Controllers/uigridcontroller.js"></script>
+    <script src="Controllers/uichartcontroller.js"></script>
+    <script src="Controllers/carouselcontroller.js"></script>
+    <script src="Controllers/jqplot.barchartcontroller.js"></script>
+    <script src="Controllers/startcontroller.js"></script>
+
+    <script src="Services/JsonService.js"></script>
+
+    <!-- Get userIP IP -->
+    <script type="text/javascript">
+        var userIP;
+    </script>
+    <script type="text/javascript" src="https://l2.io/ip.js?var=userIP"></script>
+</body>
+
+</html>

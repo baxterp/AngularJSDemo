@@ -1,0 +1,29 @@
+﻿<div ng-controller="UIChartController">
+    <div class="row">
+        <div class="col-md-12">
+            <p>This page shows a third party Javascript pie chart control. The data shown is loaded from a WebAPI data service hosted locally, with data read from an SQL Server database.</p>
+        </div>
+        <div class="col-md-12">
+            <div ui-chart="chartData" chart-options="myChartOpts"></div>
+        </div>
+        <div class="col-md-12">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="return false;">Controller source code</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                        <div id="sourcecode" class="panel-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript-lazy">
+        $('#sourcecode')
+          .load('SourceCode/ChartController.html');
+    </script>
+</div>

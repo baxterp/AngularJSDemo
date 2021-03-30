@@ -1,0 +1,63 @@
+﻿<div data-ng-controller="StartController">
+    <div class="row">
+        <div class="col-md-12" style="padding-bottom:40px">
+            <p>
+                This site is an AngularJS Single Page Application, which uses a WebAPI data service provider. With web site design and layout acheived using the Bootstrap 3 front end framework.
+                The site is designed to demonstrate AngularJS programming techniques, third party Javascript controls, HTTP Post opertioans, plus other commonly used modern web site functionality.
+            </p>
+            <p>Each page has the Javascript source code files used displayed in accordion controls, so the programming techniques can be viewed.</p>
+        </div>
+        <div class="col-md-12">
+            <div class="panel-group" id="accordionOne">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordionOne" href="#collapseOne" onclick="return false;">app.js source code</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                        <div id="appsourcecode" class="panel-body" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="panel-group" id="accordionTwo">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordionTwo" href="#collapseTwo" onclick="return false;">Directives source code</a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div id="directivessourcecode" class="panel-body" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="panel-group" id="accordionThree">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordionThree" href="#collapseThree" onclick="return false;">Services source code</a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                        <div id="servicessourcecode" class="panel-body" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript-lazy">
+            $('#appsourcecode')
+                .load('SourceCode/App.html');
+
+            $('#directivessourcecode')
+                .load('SourceCode/Directives.html');
+
+            $('#servicessourcecode')
+                .load('SourceCode/Services.html');
+        </script>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+﻿<div ng-controller="MainController">
+    <div class="row">
+        <div class="col-md-12">
+            <p>This page shows the use of AngularJS databinding into an html table. The data shown is read from an SQL Server database, and provided through a WebAPI data service, hosted locally.</p>
+        </div>
+        <div class="col-md-12">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="return false;">Controller source code</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                        <div id="sourcecode" class="panel-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" col-md-12">
+            <div id="tables">
+                <table id="ProductsTable" ng-show="data" style="padding-top:100px;width:inherit" class="table table-striped table-bordered table-hover">
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Supplier Name</th>
+                        <th>Unit Price</th>
+                        <th>Units In Stock</th>
+                    </tr>
+                    <tr>
+                        <td>Filter: Contains<input ng-model="search.ProductName" /></td>
+                        <td>Filter: Contains<input ng-model="search.SupplierName" /></td>
+                    </tr>
+                    <tr data-ng-repeat="item in data | filter:search">
+                        <td>{{item.ProductName}}</td>
+                        <td>{{item.SupplierName}}</td>
+                        <td>{{item.UnitPrice | currency : '£' : 2}}</td>
+                        <td>{{item.UnitsInStock}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript-lazy">
+        $('#sourcecode')
+          .load('SourceCode/MainController.html');
+    </script>
+</div>

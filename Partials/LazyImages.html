@@ -1,0 +1,44 @@
+﻿<div ng-controller="ImagesController">
+    <div class="row">
+        <div class="col-md-6">
+            <p>This page shows the use a a Flickr search API to load in images from Frickr.  A lazy loading images extension has been used, which unfortunately is unreliable.</p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="return false;">Controller source code</a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                    <div id="sourcecode" class="panel-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label style="font-size:16pt;padding-left:5px">Flickr Search</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6" style="padding-top:5px">
+            <input type="text" class="form-control" ng-model="imgsearch" ng-enter="getImages()" />
+        </div>
+        <div class="col-md-6">
+            <button ng-href="#btnGetProducts" class="btn btn-default btn-lg" type="button" ng-click="getImages()">Get images</button>
+        </div>
+    </div>
+    <div class="row" style="padding-top:30px">
+        <div class=" col-md-10">
+            <span data-ng-repeat="item in data.items" ><img lazy-src='{{item.media.m}}' alt="missing" style="padding:10px" /></span>
+        </div>
+    </div>
+    <script type="text/javascript-lazy">
+        $('#sourcecode')
+          .load('SourceCode/EditController.html');
+    </script>
+</div>

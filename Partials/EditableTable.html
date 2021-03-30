@@ -1,0 +1,60 @@
+﻿<div ng-controller="EditableController">
+    <div class="col-md-12">
+        <p>
+            This page shows the use of AngularJS templating, with the 'edit' and 'display' templates being used.
+            The data in the page is stored in the controller Javascript file using the $scope service, and therefore does not persist beyond a page reload.
+        </p>
+    </div>
+    <div class="col-md-12">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="return false;">Controller source code</a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                    <div id="sourcecode" class="panel-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="contact in model.contacts" ng-include="getTemplate(contact)"></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script type="text/ng-template" id="display">
+        <td>{{contact.name}}</td>
+        <td>{{contact.age}}</td>
+        <td>
+            <button class="btn btn-default btn-xs" ng-click="editContact(contact)">Edit</button>
+        </td>
+    </script>
+    <script type="text/ng-template" id="edit">
+        <td><input type="text" ng-model="model.selected.name" /></td>
+        <td><input type="text" ng-model="model.selected.age" /></td>
+        <td>
+            <button class="btn btn-default btn-xs" ng-click="saveContact($index)">Save</button>
+            <button class="btn btn-default btn-xs" ng-click="reset()">Cancel</button>
+        </td>
+    </script>
+
+    <script type="text/javascript-lazy">
+        $('#sourcecode')
+          .load('SourceCode/EditController.html');
+    </script>
+
+</div>

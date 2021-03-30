@@ -1,0 +1,66 @@
+﻿<div ng-controller="BindingFiltersController">
+    <div class="col-xs-12">
+        <p>
+            This page demonstrates form validation using AngularJS and javascipt, with a regular expression test for each input box.
+            Both input boxes are character restricted, using AngularJS custom directives. The submit button only becomes active when both input boxes are valid.
+            The submit button is used to send a http post request to a test server, with the reply message displayed when a response is received.
+        </p>
+        <div class="well bs-component">
+            <form class="form-horizontal" ng-submit="submit()">
+                <fieldset>
+                    <legend>Input Demo</legend>
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <label for="inputDate" class="control-label" style="padding-bottom: 5px">Enter date, Date keys only allowed</label>
+                            <div>
+                                <input class="form-control" id="inputDate" placeholder="DD/MM/YYYY" ng-style="{'background-color':dateColorValid}" style="color:#252525"
+                                       ng-model="inputDate" ng-change="testDate(inputDate)" type="text" date-keys />
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <label for="inputDate" class="control-label" style="padding-bottom: 5px">Enter email, Email keys only allowed</label>
+                            <div>
+                                <input class="form-control" id="inputEmail" placeholder="example@example.com" ng-style="{'background-color':emailColorValid }" style="color:#252525"
+                                       ng-model="inputEmail" ng-change="testEmail(inputEmail)" type="text" email-keys />
+                            </div>
+                        </div>
+                        <div class="col-xs-6">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                        </div>
+                        <div class="col-xs-4">
+                        </div>
+                        <div class="col-xs-2">
+                            <button type="submit" class="btn btn-default" ng-disabled="disableButton()">Submit</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="return false;">Controller source code - Slight problem with formatting below</a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                    <div id="sourcecode" class="panel-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript-lazy">
+        $('#sourcecode')
+          .load('SourceCode/BindingFiltersController.html');
+    </script>
+</div>
